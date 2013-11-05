@@ -2,7 +2,9 @@
 
 var pixi = require('pixi');
 
-var renderer = pixi.autoDetectRenderer(800, 600);
+var GameScene = require('./scene/game_scene');
+
+/*var renderer = pixi.autoDetectRenderer(800, 600);
 document.body.appendChild(renderer.view);
 
 var stage = new pixi.Stage(0x66FF00);
@@ -13,4 +15,7 @@ function animate() {
     requestAnimationFrame(animate);
 }
 
-requestAnimationFrame(animate);
+requestAnimationFrame(animate);*/
+
+var test = new GameScene(null);
+test.update(0);
