@@ -1,0 +1,61 @@
+{
+    "passfail"      : false,
+    "maxerr"        : 0,
+    "browser"       : false,
+
+    "node"          : false,
+    "rhino"         : false,
+    "couch"         : false,
+    "wsh"           : false,
+
+    "jquery"        : false,
+    "prototypejs"   : false,
+    "mootools"      : false,
+    "dojo"          : false,
+
+    "predef"     : [
+        "require",
+        "exports",
+        "module",
+        "document",
+        "requestAnimationFrame"
+    ],
+
+    "debug"         : false,
+    "devel"         : false,
+
+    "es5"           : false,
+    "strict"        : false,
+    "globalstrict"  : true,
+
+    "smarttabs"     : false,
+    "asi"           : true,
+    "laxbreak"      : false,
+    "bitwise"       : false,
+    "boss"          : false,
+    "curly"         : false,
+    "eqeqeq"        : false,
+    "eqnull"        : true,
+    "evil"          : false,
+    "expr"          : false,
+    "forin"         : false,
+    "immed"         : true,
+    "latedef"       : true,
+    "loopfunc"      : false,
+    "noarg"         : true,
+    "regexp"        : true,
+    "regexdash"     : false,
+    "scripturl"     : true,
+    "shadow"        : false,
+    "supernew"      : false,
+    "undef"         : false,
+
+    "newcap"        : true,
+    "noempty"       : true,
+    "nonew"         : false,
+    "nomen"         : false,
+    "onevar"        : false,
+    "plusplus"      : false,
+    "sub"           : false,
+    "trailing"      : true
+}

@@ -1,0 +1,37 @@
+{
+  "name": "PixiLife",
+  "version": "0.0.0",
+  "description": "",
+  "main": "Gruntfile.js",
+  "dependencies": {
+    "browserify": "~2.35.0",
+    "grunt": "~0.4.1",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-browserify": "~1.2.11",
+    "grunt-contrib-connect": "~0.5.0",
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-contrib-csslint": "~0.1.2",
+    "grunt-contrib-jshint": "~0.7.1",
+    "grunt-contrib-uglify": "~0.2.5",
+    "pixi": "~0.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RawArkanis/PixiLife.git"
+  },
+  "keywords": [
+    "pixi.js",
+    "game",
+    "life",
+    "conway"
+  ],
+  "author": "Luiz de Prá",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/RawArkanis/PixiLife/issues"
+  }
+}
