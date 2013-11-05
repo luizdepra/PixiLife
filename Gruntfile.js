@@ -26,7 +26,10 @@ module.exports = function (grunt) {
       release: 'pixilife.min.js'
     },
     // Clean
-    clean: ['<%= dir.build %>/*'],
+    clean: {
+      dev: '<%= dir.src %>/<%= dir.js %>/<%= bundle.dev %>',
+      release: '<%= dir.build %>/*'
+    },
     // Copy
     copy: {
       main: {
@@ -105,6 +108,6 @@ module.exports = function (grunt) {
   // Register Tasks
   grunt.registerTask('default', ['build']);
   grunt.registerTask('build', ['clean', 'copy', 'jshint:src', 'browserify:release', 'uglify:release']);
-  grunt.registerTask('build-dev', ['jshint:src', 'browserify:dev']);
+  grunt.registerTask('build-dev', ['clean:dev', 'jshint:src', 'browserify:dev']);
   grunt.registerTask('server', ['connect:server']);
 };
