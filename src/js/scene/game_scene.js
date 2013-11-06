@@ -2,24 +2,23 @@
 
 var BaseScene = require('./base_scene');
 
-function GameScene(manager)
-{
+var PIXI = require('pixi');
+
+function GameScene(manager) {
     BaseScene.call(this, manager);
 
-    this._scene = null;
+    this._stage = new PIXI.Stage(0xFFAAFF);
 }
 
 GameScene.prototype = {
   constructor: GameScene,
 
-  update: function(delta)
-  {
-    BaseScene.prototype.update.call(this, delta);
+  update: function(delta) {
+    
   },
 
-  render: function()
-  {
-    //this._manager.renderer.render(this._scene, this._camera.internal);
+  render: function() {
+    this._manager.renderer.render(this._stage);
   }
 };
 

@@ -3,16 +3,14 @@
 function BaseScene(manager) {
   this._manager = manager;
 
-  this._scene = null;
+  this._stage = null;
 }
 
 BaseScene.prototype = {
   constructor: BaseScene,
 
   update: function(delta)
-  {
-    console.log('base');
-  },
+  {},
 
   render: function()
   {}

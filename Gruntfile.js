@@ -53,9 +53,11 @@ module.exports = function (grunt) {
         options: {
             ignores: ['<%= dir.src %>/<%= dir.js %>/<%= bundle.dev %>']
         }
-      },
-      dev: {
-        src: '<%= dir.src %>/<%= dir.js %>/<%= bundle.dev %>'
+      }
+    },
+    csslint: {
+      src: {
+        src: ['<%= dir.src %>/<%= dir.css %>/**/*.css']
       }
     },
     // Uglify
@@ -100,6 +102,7 @@ module.exports = function (grunt) {
   // Load Tasks
   grunt.loadNpmTasks('grunt-browserify');
   grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-contrib-csslint');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-copy');
@@ -107,7 +110,7 @@ module.exports = function (grunt) {
 
   // Register Tasks
   grunt.registerTask('default', ['build']);
-  grunt.registerTask('build', ['clean', 'copy', 'jshint:src', 'browserify:release', 'uglify:release']);
-  grunt.registerTask('build-dev', ['clean:dev', 'jshint:src', 'browserify:dev']);
+  grunt.registerTask('build', ['clean', 'copy', 'jshint', 'csslint', 'browserify:release', 'uglify:release']);
+  grunt.registerTask('build-dev', ['clean:dev', 'jshint', 'csslint', 'browserify:dev']);
   grunt.registerTask('server', ['connect:server']);
 };
