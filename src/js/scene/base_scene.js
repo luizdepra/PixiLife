@@ -1,23 +1,21 @@
-module.exports = function(){
-  'use strict';
+'use strict';
 
-  function BaseScene(manager) {
-    this._manager = manager;
+function BaseScene(manager) {
+  this._manager = manager;
 
-    this._scene = null;
-  }
+  this._scene = null;
+}
 
-  BaseScene.prototype = {
-    constructor: BaseScene,
+BaseScene.prototype = {
+  constructor: BaseScene,
 
-    update: function(delta)
-    {
-      console.log('base');
-    },
+  update: function(delta)
+  {
+    console.log('base');
+  },
 
-    render: function()
-    {}
-  };
-
-  return BaseScene;
+  render: function()
+  {}
 };
+
+module.exports = BaseScene;

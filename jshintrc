@@ -18,7 +18,8 @@
         "exports",
         "module",
         "document",
-        "requestAnimationFrame"
+        "requestAnimationFrame",
+        "console"
     ],
 
     "debug"         : false,
