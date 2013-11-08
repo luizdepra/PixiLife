@@ -1,8 +1,6 @@
 'use strict';
 
 function SceneManager(renderer) {
-    this.renderer = renderer;
-
     this._currentScene = null;
 }
 

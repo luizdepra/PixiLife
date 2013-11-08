@@ -1,6 +1,7 @@
 'use strict';
 
 var BaseScene = require('./base_scene');
+var GameScene = require('./game_scene');
 
 var PIXI = require('pixi');
 
@@ -9,7 +10,7 @@ function LoadingScene(manager) {
 
   var json = ['../res/sprite_sheet.json'];
 
-  this._stage = new PIXI.Stage(0x005500);
+  this._stage = new PIXI.Stage(0x000000);
 
   this._isLoading = false;
   this._loader = new PIXI.AssetLoader(json);
@@ -17,14 +18,7 @@ function LoadingScene(manager) {
   var self = this;
 
   function _onAssetsLoaded() {
-    var cell = PIXI.Sprite.fromFrame('tile_normal01.png');
-
-    cell.position.x = 0;
-    cell.position.y = 0;
-
-    self._stage.addChild(cell);
-
-    //this._manager.changeScene();
+    self._manager.sceneManager.changeScene(new GameScene(self._manager));
   }
 
   this._loader.onComplete = _onAssetsLoaded;

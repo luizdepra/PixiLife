@@ -2,21 +2,25 @@
 
 var PIXI = require('pixi');
 
+var GameManager = require('./game_manager');
 var SceneManager = require('./scene/scene_manager');
 var LoadingScene = require('./scene/loading_scene');
 
 var renderer = PIXI.autoDetectRenderer(640, 360);
 document.body.appendChild(renderer.view);
 
-var manager = new SceneManager(renderer);
+var gameManager = new GameManager();
 
-var loadingScene = new LoadingScene(manager);
-manager.changeScene(loadingScene);
+gameManager.renderer = renderer;
+gameManager.sceneManager = new SceneManager(gameManager);
+
+var loadingScene = new LoadingScene(gameManager);
+gameManager.sceneManager.changeScene(loadingScene);
 
 function animate() {
-    manager.update(0.0);
+    gameManager.sceneManager.update(0.0);
 
-    manager.render();
+    gameManager.sceneManager.render();
 
     requestAnimationFrame(animate);
 }
